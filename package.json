@@ -1,6 +1,6 @@
 {
   "name": "crd-number",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A util package for Chinese, Roman and Digital numbers.",
   "main": "crd.js",
   "scripts": {
@@ -10,10 +10,22 @@
     "crd.js"
   ],
   "author": "markselby <markselbyfcy@163.com>",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "devDependencies": {
     "istanbul": "^0.3.2",
     "mocha": "^1.21.4",
     "should": "^4.0.4"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markselby9/crd-number.git"
+  },
+  "bugs": {
+    "url": "https://github.com/markselby9/crd-number/issues"
+  },
+  "homepage": "https://github.com/markselby9/crd-number#readme"
 }

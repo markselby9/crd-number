@@ -4,7 +4,7 @@
   "description": "A util package for Chinese, Roman and Digital numbers.",
   "main": "crd.js",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "mocha"
   },
   "keywords": [
     "crd.js"

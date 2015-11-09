@@ -1,7 +1,7 @@
 {
   "name": "crd-number",
-  "version": "0.0.2",
-  "description": "A util package for Chinese, Roman and Digital numbers.",
+  "version": "0.0.3",
+  "description": "A util package for transfering between Chinese, Roman and Digital numbers.",
   "main": "crd.js",
   "scripts": {
     "test": "mocha"

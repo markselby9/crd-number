@@ -45,6 +45,11 @@ console.log(crd.TelephoneNumberChinese2Digit('12345=3124'));
 
 isNumeric(x)
 
+
+```
+var isNum = isNumeric(100);
+```
+
 To determine whether x is a number.  
 判断变量x是否为数字.
 

@@ -16,7 +16,7 @@ npm install crd-number
 
 ## How to use
 
-##### ##### #### Digit2SimplifiedChinese(chinese), Digit2TraditionalChinese(digit)
+Digit2SimplifiedChinese(chinese), Digit2TraditionalChinese(digit)
 
 ```  
 console.log(crd.Digit2SimplifiedChinese(-897573589));

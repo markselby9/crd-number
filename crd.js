@@ -40,6 +40,9 @@ function Digit2SimplifiedChinese(num){
     return result;
 }
 
+/**
+ * @return {string}
+ */
 function Digit2TraditionalChinese(num){
     if (!isNumeric(num)){
         return "ERROR: not a number!";
@@ -82,7 +85,7 @@ function TelephoneNumberChinese2Digit(str){
         if (('0'<=str[i])&&('9'>=str[i])){
             result+=str[i];
         }
-        else if (table.ChineseSimplifiedTable[str[i]]!=undefined) {
+        else if (table.ChineseSimplifiedTable[str[i]]) {
             result += table.ChineseSimplifiedTable[str[i]];
         }
         else{
@@ -100,7 +103,7 @@ function TelephoneNumberDigit2Chinese(digits){
     var result = "";
     for (var i = 0; i < str.length; i++){
         if (('0'<=str[i])&&('9'>=str[i])){
-            if (table.ChineseSimplifiedTable[str[i]]!=undefined) {
+            if (table.ChineseSimplifiedTable[str[i]]) {
                 result += table.ChineseSimplifiedTable[str[i]];
             }
         }
@@ -111,12 +114,49 @@ function TelephoneNumberDigit2Chinese(digits){
     return result;
 }
 
-function Roman2Digit(){
-
+/**
+ * @return {number}
+ */
+function Roman2Digit(string){
+    var result = 0;
+    for (var i = string.length-1; i>=0; i--){
+        if (!result){
+            result = table.RomanTable[string[i]];
+            continue;
+        }
+        if (table.RomanTable[string[i]] >= table.RomanTable[string[i+1]]){
+            result+=table.RomanTable[string[i]];
+        }else{
+            result-=table.RomanTable[string[i]];
+        }
+    }
+    return result;
 }
 
-function Digit2Roman(){
-    
+/**
+ * @return {string}
+ */
+function Digit2Roman(num){
+    if (num<0 || num>4000){
+        return "Error: number exceeds the limit";
+    }
+    if (!isNumeric(num)){
+        return "Error: Not a number!";
+    }
+    var roman = "";
+    var i = 0;
+    while (i<table.RomanValue.length){
+        if (table.RomanValue[i] > num){
+            i++;
+            continue;
+        }
+        while (num>=table.RomanValue[i]){
+            num-=table.RomanValue[i];
+            roman+=table.RomanSymbol[i];
+        }
+        i++;
+    }
+    return roman;
 }
 
 // isNumeric
@@ -138,3 +178,5 @@ exports.TelephoneNumberChinese2Digit = TelephoneNumberChinese2Digit;
 exports.isNumeric = isNumeric;
 exports.Digit2SimplifiedChinese = Digit2SimplifiedChinese;
 exports.Digit2TraditionalChinese = Digit2TraditionalChinese;
+exports.Digit2Roman = Digit2Roman;
+exports.Roman2Digit = Roman2Digit;

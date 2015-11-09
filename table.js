@@ -2,6 +2,18 @@
  * Created by fengchaoyi on '1''5'/'1''1'/'5'.
  */
 
+exports.RomanSymbol = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+exports.RomanValue = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
+exports.RomanTable = {
+    "I":1,
+    "V":5,
+    "X":10,
+    "L":50,
+    "C":100,
+    "D":500,
+    "M":1000
+};
+
 exports.ChineseSimplifiedTable = {
     '0': '零',
     '1': '一',

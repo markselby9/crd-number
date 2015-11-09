@@ -11,4 +11,13 @@ describe('test/test.js', function () {
     it('should equal for a negative number', function () {
         main.Digit2SimplifiedChinese(-33546).should.equal("负三万三千五百四十六");
     });
+    it('should equal for arabian to roman', function(){
+        main.Digit2Roman(2333).should.equal("MMCCCXXXIII")
+    });
+    it('should equal for arabian to roman', function(){
+        main.Digit2Roman(1234).should.equal("MCCXXXIV")
+    });
+    it('should equal for roman to arabian', function(){
+        main.Roman2Digit("MCCXXXIV").should.equal(1234)
+    });
 });

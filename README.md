@@ -1,4 +1,5 @@
-#crd-number  
+#[crd-number](https://www.npmjs.com/package/crd-number)
+
 A package including several util methods for: 
 
 * Chinese number
